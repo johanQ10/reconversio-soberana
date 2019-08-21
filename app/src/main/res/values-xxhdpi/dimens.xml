@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="title_app">20dp</dimen>
+    <dimen name="txt_default">18sp</dimen>
+    <dimen name="txt_num">18sp</dimen>
+</resources>

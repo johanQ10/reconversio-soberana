@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blueApp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/image_star"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:padding="15dp"
+            android:src="@drawable/star"
+            android:contentDescription="@string/rating_google_play"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:textSize="@dimen/title_app"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/app_name"
+            tools:ignore="SpUsage" />
+
+        <ImageView
+            android:id="@+id/image_share"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:padding="15dp"
+            android:src="@drawable/share"
+            android:contentDescription="@string/share_app"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/linear_action_bar"
+        android:background="@color/grayLight"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:orientation="horizontal"
+                tools:ignore="NestedWeights">
+
+                <TextView
+                    android:id="@+id/txt_bss"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    android:textSize="@dimen/txt_num"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/bss"
+                    android:background="@drawable/bg_blue_circle_border_bluedark"
+                    tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+                <ImageView
+                    android:id="@+id/image_arrow"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/arrow_right_blue"
+                    android:contentDescription="@string/bss_to_bsf" />
+
+                <TextView
+                    android:id="@+id/txt_bsf"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    android:textSize="@dimen/txt_num"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/bsf"
+                    android:background="@drawable/bg_blue_circle_border_bluedark"
+                    tools:ignore="ObsoleteLayoutParam,RelativeOverlap,RtlHardcoded" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/image_swap"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:src="@drawable/swap"
+                android:background="@drawable/bg_blue_rectangle_border_bluedark"
+                android:contentDescription="@string/bss_to_bsf" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.033"/>
+
+        <LinearLayout
+            android:id="@+id/linear_soberano"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.125"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_title_bolivares_soberanos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/grayDark"
+                android:text="@string/text_bolivares_soberanos"/>
+
+            <TextView
+                android:id="@+id/txt_value_bolivares_soberanos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_default"
+                android:gravity="right"
+                android:textColor="@color/grayDark"
+                android:text="@string/value_soberano_default"
+                tools:ignore="RtlHardcoded" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayDark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_fuerte_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.125"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_title_bolivares_fuertes_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/grayDark"
+                android:text="@string/text_bolivares_fuertes"/>
+
+            <TextView
+                android:id="@+id/txt_value_bolivares_fuertes_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_default"
+                android:gravity="right"
+                android:textColor="@color/grayDark"
+                android:text="@string/value_fuerte_default"
+                tools:ignore="RtlHardcoded" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayDark"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.033"/>
+
+        <LinearLayout
+            android:id="@+id/linear_fuerte"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.125"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_title_bolivares_fuertes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/grayDark"
+                android:text="@string/text_bolivares_fuertes"/>
+
+            <TextView
+                android:id="@+id/txt_value_bolivares_fuertes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_default"
+                android:gravity="right"
+                android:textColor="@color/blueDark"
+                android:text="@string/value_fuerte_default"
+                tools:ignore="RtlHardcoded" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blueDark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_soberano_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.125"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_title_bolivares_soberanos_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/grayDark"
+                android:text="@string/text_bolivares_soberanos"/>
+
+            <TextView
+                android:id="@+id/txt_value_bolivares_soberanos_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_default"
+                android:gravity="right"
+                android:textColor="@color/blueDark"
+                android:text="@string/value_soberano_default"
+                tools:ignore="RtlHardcoded" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blueDark"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.033"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.225"
+                android:gravity="center"
+                android:orientation="horizontal"
+                tools:ignore="NestedWeights">
+
+                <TextView
+                    android:id="@+id/txt_one"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_num"
+                    android:background="@drawable/bg_graydark_rectangle_radius"
+                    android:text="1"
+                    tools:ignore="NestedWeights" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/txt_two"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_num"
+                    android:background="@drawable/bg_graydark_rectangle_radius"
+                    android:text="2"/>
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/txt_three"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_num"
+                    android:background="@drawable/bg_graydark_rectangle_radius"
+                    android:text="3"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.033"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.225"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_four"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_num"
+                    android:background="@drawable/bg_graydark_rectangle_radius"
+                    android:text="4"
+                    tools:ignore="NestedWeights" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/txt_five"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_num"
+                    android:background="@drawable/bg_graydark_rectangle_radius"
+                    android:text="5"/>
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/txt_six"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_num"
+                    android:background="@drawable/bg_graydark_rectangle_radius"
+                    android:text="6"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.033"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.225"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_seven"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_num"
+                    android:background="@drawable/bg_graydark_rectangle_radius"
+                    android:text="7"
+                    tools:ignore="NestedWeights" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/txt_eight"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_num"
+                    android:background="@drawable/bg_graydark_rectangle_radius"
+                    android:text="8"/>
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/txt_nine"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_num"
+                    android:background="@drawable/bg_graydark_rectangle_radius"
+                    android:text="9"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.033"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.225"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/image_clean"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="15dp"
+                    android:src="@drawable/delete"
+                    android:background="@drawable/bg_graydark_rectangle_radius"
+                    android:contentDescription="@string/delete" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/txt_zero"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_num"
+                    android:background="@drawable/bg_graydark_rectangle_radius"
+                    android:text="0"/>
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"/>
+
+                <ImageView
+                    android:id="@+id/image_backspace"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="15dp"
+                    android:background="@drawable/bg_graydark_rectangle_radius"
+                    android:src="@drawable/backspace"
+                    android:contentDescription="@string/backspace" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_dialog_rating"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.7"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_blue_rectangle_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/white"
+                android:text="@string/txt_rating_comment_app"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_no_rating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/blueApp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center"
+                    android:text="@string/txt_no_rating"
+                    android:background="@drawable/bg_white_rectangle_radius"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/txt_rating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/blueApp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:text="@string/txt_rating"
+                    android:background="@drawable/bg_white_rectangle_radius"
+                    tools:ignore="RtlHardcoded" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

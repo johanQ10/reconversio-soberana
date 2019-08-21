@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Reconversión Soberana</string>
+    <string name="rating_google_play">Rating Google Play</string>
+    <string name="share_app">Compartir Aplicacion</string>
+    <string name="bss">BsS.</string>
+    <string name="bss_to_bsf">Bss to Bsf</string>
+    <string name="bsf">BsF.</string>
+    <string name="text_bolivares_soberanos">Bolívares Soberanos:</string>
+    <string name="text_bolivares_fuertes">Bolívares Fuertes:</string>
+    <string name="value_soberano_default">0,00 BsS.</string>
+    <string name="value_fuerte_default">0 BsF.</string>
+    <string name="delete">Delete</string>
+    <string name="backspace">Backspace</string>
+    <string name="share_with">Compartir con…</string>
+
+    <string name="text_share_app">Descargate ya la mejor aplicación para realizar tu conversión de
+        Bolívares Soberanos a Bolívares Fuertes y viceversa. Disponible de manera gratuita en Google
+        Play Store accediendo al siguiente link:</string>
+    <string name="txt_rating_comment_app">Si te gustó esta aplicación, por favor regálanos una calificación y un comentario.\n¡Gracias!</string>
+    <string name="txt_no_rating">No calificar</string>
+    <string name="txt_rating">Calificar</string>
+</resources>

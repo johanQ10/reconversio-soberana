@@ -1,8 +1,10 @@
 apply plugin: 'com.android.library'
+//apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 32
     defaultConfig {
+//        applicationId "com.jlbit.reconversionsoberana"
         minSdkVersion 21
         targetSdkVersion 32
         versionCode 4

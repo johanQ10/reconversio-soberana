@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -84,6 +85,8 @@ public class HomeActivity extends AppCompatActivity {
         txt_zero = findViewById(R.id.txt_zero);
         image_clean = findViewById(R.id.image_clean);
         image_backspace = findViewById(R.id.image_backspace);
+
+        Toast.makeText(this, "Soberano", Toast.LENGTH_SHORT).show();
 
 //        image_star.setOnClickListener(v -> relative_dialog_rating.setVisibility(View.VISIBLE));
 //        image_share.setOnClickListener(v -> {

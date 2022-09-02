@@ -85,55 +85,55 @@ public class HomeActivity extends AppCompatActivity {
         image_clean = findViewById(R.id.image_clean);
         image_backspace = findViewById(R.id.image_backspace);
 
-        image_star.setOnClickListener(v -> relative_dialog_rating.setVisibility(View.VISIBLE));
-        image_share.setOnClickListener(v -> {
-            Intent intent = new Intent(Intent.ACTION_SEND);
-            intent.setType("text/plain");
-            intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.text_share_app) + " " + URL);
-            startActivity(Intent.createChooser(intent, getString(R.string.share_with)));
-        });
-        txt_no_rating.setOnClickListener(v -> relative_dialog_rating.setVisibility(View.GONE));
-        txt_rating.setOnClickListener(v -> {
-            try {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
-            } catch (ActivityNotFoundException e) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
-            }
-        });
-        image_swap.setOnClickListener(v -> {
-            if (soberano) {
-                image_arrow.setImageDrawable(getResources().getDrawable(R.drawable.arrow_left_blue));
-                soberano = false;
-                linear_soberano.setVisibility(View.GONE);
-                linear_fuerte.setVisibility(View.GONE);
-                linear_soberano_2.setVisibility(View.VISIBLE);
-                linear_fuerte_2.setVisibility(View.VISIBLE);
-            } else {
-                image_arrow.setImageDrawable(getResources().getDrawable(R.drawable.arrow_right_blue));
-                soberano = true;
-                linear_soberano.setVisibility(View.VISIBLE);
-                linear_fuerte.setVisibility(View.VISIBLE);
-                linear_soberano_2.setVisibility(View.GONE);
-                linear_fuerte_2.setVisibility(View.GONE);
-            }
-        });
-        image_clean.setOnClickListener(v -> {
-            txt_value_bolivares_soberanos.setText("0,00 BsS.");
-            txt_value_bolivares_fuertes.setText("0 BsF.");
-            txt_value_bolivares_soberanos_2.setText("0,00 BsS.");
-            txt_value_bolivares_fuertes_2.setText("0 BsF.");
-        });
-        image_backspace.setOnClickListener(v -> deleteNum());
-        txt_one.setOnClickListener(v -> selectedNum("1"));
-        txt_two.setOnClickListener(v -> selectedNum("2"));
-        txt_three.setOnClickListener(v -> selectedNum("3"));
-        txt_four.setOnClickListener(v -> selectedNum("4"));
-        txt_five.setOnClickListener(v -> selectedNum("5"));
-        txt_six.setOnClickListener(v -> selectedNum("6"));
-        txt_seven.setOnClickListener(v -> selectedNum("7"));
-        txt_eight.setOnClickListener(v -> selectedNum("8"));
-        txt_nine.setOnClickListener(v -> selectedNum("9"));
-        txt_zero.setOnClickListener(v -> selectedNum("0"));
+//        image_star.setOnClickListener(v -> relative_dialog_rating.setVisibility(View.VISIBLE));
+//        image_share.setOnClickListener(v -> {
+//            Intent intent = new Intent(Intent.ACTION_SEND);
+//            intent.setType("text/plain");
+//            intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.text_share_app) + " " + URL);
+//            startActivity(Intent.createChooser(intent, getString(R.string.share_with)));
+//        });
+//        txt_no_rating.setOnClickListener(v -> relative_dialog_rating.setVisibility(View.GONE));
+//        txt_rating.setOnClickListener(v -> {
+//            try {
+//                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
+//            } catch (ActivityNotFoundException e) {
+//                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+//            }
+//        });
+//        image_swap.setOnClickListener(v -> {
+//            if (soberano) {
+//                image_arrow.setImageDrawable(getResources().getDrawable(R.drawable.arrow_left_blue));
+//                soberano = false;
+//                linear_soberano.setVisibility(View.GONE);
+//                linear_fuerte.setVisibility(View.GONE);
+//                linear_soberano_2.setVisibility(View.VISIBLE);
+//                linear_fuerte_2.setVisibility(View.VISIBLE);
+//            } else {
+//                image_arrow.setImageDrawable(getResources().getDrawable(R.drawable.arrow_right_blue));
+//                soberano = true;
+//                linear_soberano.setVisibility(View.VISIBLE);
+//                linear_fuerte.setVisibility(View.VISIBLE);
+//                linear_soberano_2.setVisibility(View.GONE);
+//                linear_fuerte_2.setVisibility(View.GONE);
+//            }
+//        });
+//        image_clean.setOnClickListener(v -> {
+//            txt_value_bolivares_soberanos.setText("0,00 BsS.");
+//            txt_value_bolivares_fuertes.setText("0 BsF.");
+//            txt_value_bolivares_soberanos_2.setText("0,00 BsS.");
+//            txt_value_bolivares_fuertes_2.setText("0 BsF.");
+//        });
+//        image_backspace.setOnClickListener(v -> deleteNum());
+//        txt_one.setOnClickListener(v -> selectedNum("1"));
+//        txt_two.setOnClickListener(v -> selectedNum("2"));
+//        txt_three.setOnClickListener(v -> selectedNum("3"));
+//        txt_four.setOnClickListener(v -> selectedNum("4"));
+//        txt_five.setOnClickListener(v -> selectedNum("5"));
+//        txt_six.setOnClickListener(v -> selectedNum("6"));
+//        txt_seven.setOnClickListener(v -> selectedNum("7"));
+//        txt_eight.setOnClickListener(v -> selectedNum("8"));
+//        txt_nine.setOnClickListener(v -> selectedNum("9"));
+//        txt_zero.setOnClickListener(v -> selectedNum("0"));
 
         soberano = true;
         URL = "http://play.google.com/store/apps/details?id=" + getPackageName();

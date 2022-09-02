@@ -1,9 +1,8 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 32
     defaultConfig {
-        applicationId "com.jlbit.soberano"
         minSdkVersion 16
         targetSdkVersion 32
         versionCode 4

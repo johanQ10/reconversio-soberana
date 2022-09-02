@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
     private ImageView image_star;
     private ImageView image_share;
     private ImageView image_arrow;

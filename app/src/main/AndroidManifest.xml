@@ -3,7 +3,7 @@
     package="com.jlbit.reconversionsoberana">
 
     <application
-        android:name="">
+        android:name=".App">
 
         <activity
             android:name="com.jlbit.reconversionsoberana.HomeActivity"

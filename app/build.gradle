@@ -1,10 +1,10 @@
-apply plugin: 'com.android.library'
-//apply plugin: 'com.android.application'
+//apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 apply plugin: 'maven-publish'
 
 android {
     defaultConfig {
-//        applicationId "com.jlbit.reconversionsoberana"
+        applicationId "com.jlbit.reconversionsoberana"
         minSdkVersion 21
         targetSdkVersion 34
         compileSdk 34

@@ -10,15 +10,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 public class HomeActivity extends AppCompatActivity {
-    private ImageView image_star;
-    private ImageView image_share;
     private ImageView image_arrow;
-    private ImageView image_swap;
 
     private RelativeLayout relative_dialog_rating;
 
@@ -27,27 +24,10 @@ public class HomeActivity extends AppCompatActivity {
     private LinearLayout linear_soberano_2;
     private LinearLayout linear_fuerte_2;
 
-    private TextView txt_no_rating;
-    private TextView txt_rating;
-
     private TextView txt_value_bolivares_soberanos;
     private TextView txt_value_bolivares_fuertes;
     private TextView txt_value_bolivares_soberanos_2;
     private TextView txt_value_bolivares_fuertes_2;
-
-    private TextView txt_one;
-    private TextView txt_two;
-    private TextView txt_three;
-    private TextView txt_four;
-    private TextView txt_five;
-    private TextView txt_six;
-    private TextView txt_seven;
-    private TextView txt_eight;
-    private TextView txt_nine;
-    private TextView txt_zero;
-
-    private ImageView image_clean;
-    private ImageView image_backspace;
 
     private boolean soberano;
     private String URL;
@@ -63,28 +43,28 @@ public class HomeActivity extends AppCompatActivity {
         linear_fuerte = findViewById(R.id.linear_fuerte);
         linear_soberano_2 = findViewById(R.id.linear_soberano_2);
         linear_fuerte_2 = findViewById(R.id.linear_fuerte_2);
-        image_star = findViewById(R.id.image_star);
-        image_share = findViewById(R.id.image_share);
+        ImageView image_star = findViewById(R.id.image_star);
+        ImageView image_share = findViewById(R.id.image_share);
         image_arrow = findViewById(R.id.image_arrow);
-        image_swap = findViewById(R.id.image_swap);
-        txt_no_rating = findViewById(R.id.txt_no_rating);
-        txt_rating = findViewById(R.id.txt_rating);
+        ImageView image_swap = findViewById(R.id.image_swap);
+        TextView txt_no_rating = findViewById(R.id.txt_no_rating);
+        TextView txt_rating = findViewById(R.id.txt_rating);
         txt_value_bolivares_soberanos = findViewById(R.id.txt_value_bolivares_soberanos);
         txt_value_bolivares_fuertes = findViewById(R.id.txt_value_bolivares_fuertes);
         txt_value_bolivares_soberanos_2 = findViewById(R.id.txt_value_bolivares_soberanos_2);
         txt_value_bolivares_fuertes_2 = findViewById(R.id.txt_value_bolivares_fuertes_2);
-        txt_one = findViewById(R.id.txt_one);
-        txt_two = findViewById(R.id.txt_two);
-        txt_three = findViewById(R.id.txt_three);
-        txt_four = findViewById(R.id.txt_four);
-        txt_five = findViewById(R.id.txt_five);
-        txt_six = findViewById(R.id.txt_six);
-        txt_seven = findViewById(R.id.txt_seven);
-        txt_eight = findViewById(R.id.txt_eight);
-        txt_nine = findViewById(R.id.txt_nine);
-        txt_zero = findViewById(R.id.txt_zero);
-        image_clean = findViewById(R.id.image_clean);
-        image_backspace = findViewById(R.id.image_backspace);
+        TextView txt_one = findViewById(R.id.txt_one);
+        TextView txt_two = findViewById(R.id.txt_two);
+        TextView txt_three = findViewById(R.id.txt_three);
+        TextView txt_four = findViewById(R.id.txt_four);
+        TextView txt_five = findViewById(R.id.txt_five);
+        TextView txt_six = findViewById(R.id.txt_six);
+        TextView txt_seven = findViewById(R.id.txt_seven);
+        TextView txt_eight = findViewById(R.id.txt_eight);
+        TextView txt_nine = findViewById(R.id.txt_nine);
+        TextView txt_zero = findViewById(R.id.txt_zero);
+        ImageView image_clean = findViewById(R.id.image_clean);
+        ImageView image_backspace = findViewById(R.id.image_backspace);
 
         image_star.setOnClickListener(v -> relative_dialog_rating.setVisibility(View.VISIBLE));
         image_share.setOnClickListener(v -> {
@@ -103,14 +83,14 @@ public class HomeActivity extends AppCompatActivity {
         });
         image_swap.setOnClickListener(v -> {
             if (soberano) {
-                image_arrow.setImageDrawable(getResources().getDrawable(R.drawable.arrow_left_blue));
+                image_arrow.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.arrow_left_blue, null));
                 soberano = false;
                 linear_soberano.setVisibility(View.GONE);
                 linear_fuerte.setVisibility(View.GONE);
                 linear_soberano_2.setVisibility(View.VISIBLE);
                 linear_fuerte_2.setVisibility(View.VISIBLE);
             } else {
-                image_arrow.setImageDrawable(getResources().getDrawable(R.drawable.arrow_right_blue));
+                image_arrow.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.arrow_right_blue, null));
                 soberano = true;
                 linear_soberano.setVisibility(View.VISIBLE);
                 linear_fuerte.setVisibility(View.VISIBLE);
@@ -160,14 +140,14 @@ public class HomeActivity extends AppCompatActivity {
                 restante = value_bsf.substring(value_bsf.length() - 3);
                 value_bsf = value_bsf.substring(0, value_bsf.length() - 3);
 
-                if(value_bsf.length() > 0)
+                if(!value_bsf.isEmpty())
                     value_bsf = value_bsf.substring(0,value_bsf.length() - 1);
 
                 if(value_bss.length() > 3)
                     value_bss = value_bss.substring(0,value_bss.length() - 1);
                 else value_bss = "0" + value_bss.substring(0, value_bss.length() - 1);
 
-                if(value_bsf.length() > 0) value_bsf = value_bsf + restante;
+                if(!value_bsf.isEmpty()) value_bsf = value_bsf + restante;
                 else{
                     if(restante.equals("000")) value_bsf = "0";
                     else{
@@ -301,7 +281,7 @@ public class HomeActivity extends AppCompatActivity {
                     n++;
                 }
 
-                if(soberano) cadena_bsf = cadena_bsf + "." + restante;
+                if (soberano) cadena_bsf = cadena_bsf + "." + restante;
             }
         }
 
